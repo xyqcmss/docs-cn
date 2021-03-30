@@ -278,7 +278,7 @@ SET ROLE ALL EXCEPT 'app_read'
 SET DEFAULT ROLE ALL TO 'rw_user1'@'localhost';
 ```
 
-用 `rw_user1@localhost` 登陆后：
+用 `rw_user1@localhost` 登陆后：tidb中无法使用localhost登录，需要在tidb-server的机器上指定127.0.0.1登录：mysql -h 127.0.0.1 -P 4000 -u rw_user1 -prw_user1pass
 
 {{< copyable "sql" >}}
 
